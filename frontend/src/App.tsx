@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+// COLLECT THE TEAMS AND IDENTIFY DATA TYPES
 const data = require('./teams.json') as {teams:Team[]}
 const allTeams = data.teams;
 interface Team {
@@ -10,6 +11,7 @@ interface Team {
   state: string;
 }
 
+// CREATE HEADER FOR THE APPLICATION
 function NameHeader() {
   return (
     <div>
@@ -21,6 +23,7 @@ function NameHeader() {
   );
 }
 
+// DIVIDE THE CARD INTO ROWS
 function TeamRow({ teams }: { teams: Team[] }) {
   return (
     <div className="row">
@@ -33,6 +36,7 @@ function TeamRow({ teams }: { teams: Team[] }) {
   );
 }
 
+// CREATE A COMPONENT FOR DISPLAYING THE TEAM INFORMATION
 class Team extends React.Component<{
   school: string;
   name: string;
@@ -55,6 +59,7 @@ class Team extends React.Component<{
   }
 }
 
+// CREATE A ROWS LIST AND MAP THEM TO DISPLAY IN THE APP
 function TeamList() {
   const rows = [];
   for (let i = 0; i < allTeams.length; i += 3) {
@@ -70,6 +75,7 @@ function TeamList() {
   );
 }
 
+// CREATE THE APP AND RETURN IT TO THE HTML
 function App() {
   return (
     <div className="App">
