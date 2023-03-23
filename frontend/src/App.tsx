@@ -51,33 +51,10 @@ class Team extends React.Component<{
           <p className="card-text text-dark">Mascot: {name}</p>
         </div>
       </div>
-      
-    //   <div className="row row-cols-3 g-3">
-    //     <div className="col">
-    //       <div className="card h-100">
-    //         <div className="card-body">
-    //           <h2 className="card-title">{school}</h2>
-    //           <h3 className="card-subtitle mb-2 text-muted">
-    //             {city}, {state}
-    //           </h3>
-    //           <p className="card-text">Mascot: {name}</p>
-    //         </div>
-    //       </div>
-    //     </div>
-    // </div>
     );
   }
 }
 
-/*function TeamList() {
-  return (
-    <div>
-      {allTeams.map((team: Team) => (
-        <Team {...team} key={team.school} />
-      ))}
-    </div>
-  );
-}*/
 function TeamList() {
   const rows = [];
   for (let i = 0; i < allTeams.length; i += 3) {
